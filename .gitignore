@@ -8,7 +8,35 @@ __cache__/
 .pytest_cache/
 # local data home (benchopt prepare output)
 data/
+# dataset files, wherever they end up (raw release, prepared splits, genomes)
+*.parquet
+*.gbff
+*.gbff.gz
+*.fasta
+*.fa
+*.fna
+*.h5
+*.h5ad
+*.npy
+*.npz
+*.tar
+*.tar.gz
+*.gz
+# model checkpoints
+*.pt
+*.pth
+*.ckpt
+*.joblib
+*.pkl
+catboost_info/
+lightning_logs/
+wandb/
+# local Python env (uv)
+.venv/
+# notebook checkpoints
+.ipynb_checkpoints/
 # local bundle / ingestion / scoring test runs
 _bundle/
 ingestion_res/
 scoring_res/
+.claude/

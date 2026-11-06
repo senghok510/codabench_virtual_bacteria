@@ -3,6 +3,7 @@ name = "codabench-virtual-bacteria"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
+<<<<<<< HEAD
 authors = [
     { name = "senghok", email = "hok.seng@polytechnique.edu" }
 ]
@@ -24,5 +25,19 @@ codabench-virtual-bacteria = "codabench_virtual_bacteria:main"
 requires = ["uv_build>=0.13.6,<0.14.0"]
 build-backend = "uv_build"
 
+=======
+requires-python = ">=3.13"
+dependencies = [
+    "benchopt",
+    "biopython>=1.88",
+    "numpy>=2.5.4",
+    "pandas>=3.1.0",
+    "scikit-learn>=1.9.1",
+    "scipy>=1.18.1",
+    "torch>=2.15.0",
+    "torchvision>=0.29.2",
+]
+
+>>>>>>> 17fbb227f0bd4d85d84d80b1f3178755cc43e1f2
 [tool.uv.sources]
 benchopt = { url = "https://github.com/benchopt/benchopt/archive/refs/heads/main.tar.gz" }
