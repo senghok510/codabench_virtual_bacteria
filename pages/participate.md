@@ -75,11 +75,17 @@ evaluates it. There, `fit` gets the train **and** the eval observations, so
 your training must adapt to more data than in your local runs. See `solution/submission.py` for a working baseline
 (feature builder + Ridge regression + dispersion calibration).
 
+The platform installs nothing at submission time: `submission.py` can only
+import the packages of `requirements.txt`, and a solver's benchopt
+`requirements` are ignored. To use another package, open a pull request on
+the challenge repository that adds it to `extra-deps.txt`.
+
 ## The compute
 
 Each submission runs on its own AWS g4dn.2xlarge machine: one NVIDIA T4 GPU
 (16 GB), 8 vCPUs and 32 GB of RAM, in the competition's Docker image
-(`tommoral/bacteria-compet:v1`, CUDA 12.6). Training and evaluation together
+(`ghcr.io/x-datascience-datacamp/bacteria-compet:v1`, CUDA 12.6).
+Training and evaluation together
 must fit in **1 hour**, or the submission fails. The three Datacamp
 challenges share these machines, so a submission may wait in the queue at
 busy times.
